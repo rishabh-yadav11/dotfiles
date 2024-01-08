@@ -26,12 +26,32 @@ battery_percent=$(($battery_percent / $battery_max_0))
 
 
 if [ "$ac" -eq 1 ]; then
-
-    if [ "$battery_percent" -gt 97 ]; then
-        echo "  100%"
+	
+    if [ "$battery_percent" -gt 99 ]; then
+        icon="󰂅"
+    elif [ "$battery_percent" -gt 90 ]; then
+        icon="󰂋"
+    elif [ "$battery_percent" -gt 80 ]; then
+        icon="󰂊"
+    elif [ "$battery_percent" -gt 70 ]; then
+        icon="󰢞"
+    elif [ "$battery_percent" -gt 60 ]; then
+        icon="󰂉"
+    elif [ "$battery_percent" -gt 50 ]; then
+        icon="󰢝"
+    elif [ "$battery_percent" -gt 40 ]; then
+        icon="󰂈"
+    elif [ "$battery_percent" -gt 30 ]; then
+        icon="󰂇"
+    elif [ "$battery_percent" -gt 20 ]; then
+        icon="󰂆"
+    elif [ "$battery_percent" -gt 10 ]; then
+	icon="󰢜"
     else
-        echo "󰚥  $battery_percent%"
+        icon="󰂃"
     fi
+	   echo "$icon $battery_percent %"
+
 else
     if [ "$battery_percent" -gt 90 ]; then
         icon="󰂂"
@@ -49,9 +69,11 @@ else
         icon="󰁼"
     elif [ "$battery_percent" -gt 20 ]; then
         icon="󰁻"
+    elif [ "$battery_percent" -gt 10 ]; then
+	icon="󰁺"
     else
         icon="󰂃"
     fi
 
-    echo "$icon $battery_percent %"
+   echo "$icon $battery_percent %"
 fi
