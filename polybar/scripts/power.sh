@@ -21,13 +21,13 @@ if [ -f "$PATH_BATTERY_0/charge_full" ]; then
     
 fi
 
-battery_percent=$(($battery_level_0 * 100))
-battery_percent=$(($battery_percent / $battery_max_0))
+battery_percent=$(($battery_level_0 * 10000))
+battery_percent=$(($battery_percent / $battery_max_0 / 98 ))
 
 
 if [ "$ac" -eq 1 ]; then
 	
-    if [ "$battery_percent" -gt 99 ]; then
+    if [ "$battery_percent" -gt 100 ]; then
         icon="󰂅"
     elif [ "$battery_percent" -gt 90 ]; then
         icon="󰂋"
@@ -53,7 +53,9 @@ if [ "$ac" -eq 1 ]; then
 	   echo "$icon $battery_percent %"
 
 else
-    if [ "$battery_percent" -gt 90 ]; then
+    if [ "$battery_percent" -gt 95 ]; then
+        icon="󰁹"
+    elif [ "$battery_percent" -gt 90 ]; then
         icon="󰂂"
     elif [ "$battery_percent" -gt 80 ]; then
         icon="󰂁"
