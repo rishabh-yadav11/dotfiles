@@ -50,7 +50,7 @@ if [ "$ac" -eq 1 ]; then
     else
         icon="󰂃"
     fi
-	   echo "$icon $battery_percent %"
+	   echo "$icon $battery_percent%"
 
 else
     if [ "$battery_percent" -gt 95 ]; then
@@ -77,5 +77,5 @@ else
         icon="󰂃"
     fi
 
-   echo "$icon $battery_percent %"
+   echo "$icon $battery_percent%"
 fi
