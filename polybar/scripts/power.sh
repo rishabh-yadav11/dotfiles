@@ -22,7 +22,7 @@ if [ -f "$PATH_BATTERY_0/charge_full" ]; then
 fi
 
 battery_percent=$(($battery_level_0 * 10000))
-battery_percent=$(($battery_percent / $battery_max_0 / 98 ))
+battery_percent=$(($battery_percent / $battery_max_0 / 100 ))
 
 
 if [ "$ac" -eq 1 ]; then
