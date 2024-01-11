@@ -20,4 +20,5 @@ vlc/vlc-qt-interface.conf
 vlc/vlcrc
 btop/
 sublime-text/Local/Session.sublime_session
-systemd
+systemd/
+Electron/
