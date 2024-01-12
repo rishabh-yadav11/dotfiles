@@ -4,3 +4,7 @@ alias ll='exa -alF --icons=auto --color=always --group-directories-first'
 alias la='exa -a --icons=auto --color=always --group-directories-first'
 alias l='exa -F --icons=auto --color=always --group-directories-first'
 alias l.='exa -a --icons=auto | egrep "^\."'
+
+
+#cat to bat
+alias cat=bat
