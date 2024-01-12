@@ -8,3 +8,6 @@ alias l.='exa -a --icons=auto | egrep "^\."'
 
 #cat to bat
 alias cat=bat
+
+#vim to nvim 
+alias vim=nvim
