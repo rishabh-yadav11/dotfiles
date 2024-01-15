@@ -1,22 +1,39 @@
 [global_config]
-  focus = mouse
-  inactive_bg_color_offset = 0.825
+  handle_size = 5
+  inactive_bg_color_offset = 0.8125
   link_single_click = True
 [keybindings]
   split_auto = <Alt>a
-  split_horiz = <Alt>h
-  split_vert = <Alt>v
+  split_horiz = <Alt>v
+  split_vert = <Alt>h
   close_term = <Alt>w
 [profiles]
   [[default]]
     icon_bell = False
     background_color = "#300a24"
-    background_darkness = 0.81
+    background_darkness = 0.8
     background_type = transparent
     font = JetBrainsMonoNL Nerd Font Propo Medium 15
     foreground_color = "#ffffff"
+    show_titlebar = False
     scrollbar_position = hidden
-    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    palette = "#000000:#cc0000:#4e9a06:#c4a000:#3465a4:#75507b:#06989a:#d3d7cf:#555753:#ef2929:#8ae234:#fce94f:#729fcf:#ad7fa8:#34e2e2:#eeeeec"
+    use_system_font = False
+    use_theme_colors = True
+    bold_is_bright = True
+    title_hide_sizetext = True
+    title_transmit_bg_color = "#1a5fb4"
+  [[ttrm]]
+    icon_bell = False
+    background_color = "#300a24"
+    background_darkness = 0.37
+    background_type = transparent
+    font = JetBrainsMonoNL Nerd Font Propo Medium 15
+    foreground_color = "#ffffff"
+    show_titlebar = False
+    scrollbar_position = hidden
+    exit_action = restart
+    palette = "#000000:#cc0000:#4e9a06:#c4a000:#3465a4:#75507b:#06989a:#d3d7cf:#555753:#ef2929:#8ae234:#fce94f:#729fcf:#ad7fa8:#34e2e2:#eeeeec"
     use_system_font = False
     use_theme_colors = True
     bold_is_bright = True
