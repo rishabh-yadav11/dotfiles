@@ -6,7 +6,7 @@
   split_auto = <Alt>a
   split_horiz = <Alt>v
   split_vert = <Alt>h
-  close_term = <Alt>w
+  close_term = <Alt>q
 [profiles]
   [[default]]
     icon_bell = False
