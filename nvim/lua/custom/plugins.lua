@@ -16,7 +16,11 @@ local plugins = {
   -- override plugin configs
   {
     "williamboman/mason.nvim",
-    opts = overrides.mason
+    opts ={
+      ensure_installed={
+        "rust-analyzer",
+      }
+    }
   },
 
   {
@@ -27,6 +31,13 @@ local plugins = {
   {
     "nvim-tree/nvim-tree.lua",
     opts = overrides.nvimtree,
+  },
+  {
+    "rust-lang/rust.vim",
+    ft= "rust",
+    init= function()
+      vim.g.rustfmt_autosave =1
+    end,
   },
 
   -- Install a plugin
