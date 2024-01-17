@@ -3,5 +3,6 @@
 -- Auto resize panes when resizing nvim window
 -- autocmd("VimResized", {
 --   pattern = "*",
---   command = "tabdo wincmd =",
+--   command = "tabdo wincmd =",i
 -- })
+vim.o.relativenumber = true

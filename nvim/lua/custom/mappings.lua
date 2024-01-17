@@ -18,7 +18,4 @@ M.general = {
     [">"] = { ">gv", "indent"},
   },
 }
-
--- more keybinds!
-
 return M

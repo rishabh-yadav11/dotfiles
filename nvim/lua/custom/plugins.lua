@@ -57,7 +57,6 @@ local plugins = {
       require "custom.configs.conform"
     end,
   },
-
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",

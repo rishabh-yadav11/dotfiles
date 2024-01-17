@@ -8,6 +8,7 @@
   split_horiz = <Alt>v
   split_vert = <Alt>h
   close_term = <Alt>q
+  toggle_zoom = <Alt>f
   switch_to_tab_1 = <Primary>1
   switch_to_tab_2 = <Primary>2
   switch_to_tab_3 = <Primary>3
