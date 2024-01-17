@@ -11,3 +11,19 @@ alias cat='bat'
 
 #vim to nvim 
 alias vim='nvim'
+
+# quality of life
+
+alias mv='mv -i'
+alias cp='cp -i'
+#cd 
+alias c.='cd ..'
+alias .2='../..'
+alias .3='../../..'
+alias .4='../../../..'
+alias .5='../../../../..'
+
+#git 
+alias gc='git commit' 
+alias gp='git push'
+alias gf='git fetch'
