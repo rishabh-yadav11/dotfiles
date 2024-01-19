@@ -13,7 +13,6 @@ $c\
 $rust\
 $nodejs\
 $python\
-$java\
 [](bold fg:color-2 bg:color-1)\
 [ ](bold fg:color-1)\
 \n
@@ -73,10 +72,6 @@ format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
 symbol = ""
 style = "bg:#212736"
 format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
-[java]
-symbol = " "
-style = "bg:color_blue"
-format = '[[ $symbol( $version) ](fg:color_fg0 bg:color_blue)]($style)'
 [c]
 symbol = " "
 style = "bg:color_blue"
