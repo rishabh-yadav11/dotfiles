@@ -1,6 +1,8 @@
 [global_config]
   handle_size = 5
+  extra_styling = False
   inactive_bg_color_offset = 0.8125
+  enabled_plugins = CustomCommandsMenu, LaunchpadBugURLHandler, LaunchpadCodeURLHandler, APTURLHandler
   link_single_click = True
 [keybindings]
   new_tab = <Alt>n
