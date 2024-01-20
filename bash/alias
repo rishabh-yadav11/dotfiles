@@ -29,6 +29,8 @@ alias .2='../..'
 alias .3='../../..'
 alias .4='../../../..'
 alias .5='../../../../..'
+#tldr to help
+alias help='tldr'
 
 #git 
 alias gc='git commit' 
