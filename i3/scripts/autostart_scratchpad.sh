@@ -1,2 +1,2 @@
 #!/bin/sh
-if ! pgrep -f "alacritty --class ttrm"; then alacritty --class ttrm & disown; fi
+if ! pgrep -f "kitty --class ttrm"; then kitty --class ttrm & disown; fi
