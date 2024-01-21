@@ -12,8 +12,8 @@ QtProject.conf
 user-dirs.dirs
 user-dirs.locale
 clipit/clipitrc
-google-chrome/NativeMessagingHosts/org.freedownloadmanager.fdm5.cnh.json
-vlc/vlc-qt-interface.conf
+google-chrome/
+vlc/
 vlc/vlcrc
 btop/
 sublime-text/
@@ -24,6 +24,7 @@ balena-etcher/
 copyq
 obs-studio/
 copyq/
-copyq/copyq_tab_JmNsaXBib2FyZA==.dat
+copyq/
 nvim/lazy-lock.json
 thorium/
+content_shell/
