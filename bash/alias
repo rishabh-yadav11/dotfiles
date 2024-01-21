@@ -32,6 +32,8 @@ alias .5='../../../../..'
 #tldr to help
 alias help='tldr'
 
+#less =more
+alias less='more'
 #git 
 alias gc='git commit' 
 alias gp='git push'
