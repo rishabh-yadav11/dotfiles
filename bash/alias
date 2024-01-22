@@ -5,14 +5,9 @@ alias la='exa -a --icons=auto --color=always --group-directories-first'
 alias l='exa -F --icons=auto --color=always --group-directories-first'
 alias l.='exa -alF --icons=auto  --color=always --group-directories-first| grep  -E "\."'
 alias tree='exa -aT --icons=auto --color=always'
+#kitty ssh
+alias ssh='kitten ssh'
 
-
-#factrio
-alias factrio='/opt/factorio/bin/x64/factorio & disown'
-
-#minecraft 
-
-alias minecraft='java -jar /opt/minecraft/SKlauncher-3.2.5.jar & disown'
 #cat to bat
 alias cat='bat'
 
