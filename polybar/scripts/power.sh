@@ -45,10 +45,8 @@ if [ "$ac" -eq 1 ]; then
         icon="󰂇"
     elif [ "$battery_percent" -gt 20 ]; then
         icon="󰂆"
-    elif [ "$battery_percent" -gt 10 ]; then
+      else
 	icon="󰢜"
-    else
-        icon="󰂃"
     fi
 	   echo "$icon $battery_percent%"
 
@@ -72,10 +70,11 @@ else
     elif [ "$battery_percent" -gt 20 ]; then
         icon="󰁻"
     elif [ "$battery_percent" -gt 10 ]; then
-	icon="󰁺"
-  
-    else
+        icon="󰁺"
+    elif [ "$battery_percent" -gt 5 ]; then
         icon="󰂃"
+    else
+      icon="󰂃"
         	dunstify -a "Low battery " -u critical -r 9994 -h int:value:"$battery_percent" -i "battery" "Battery" "Currently at $battery_percent%" -t 5000
 
     fi
