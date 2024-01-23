@@ -1,0 +1,275 @@
+{
+    "let": {
+        "prefix": "let",
+        "body": [
+            "let ${1:varname} : ${2:type} = $0"
+        ],
+        "description": "unmutable var declaration"
+    },
+    "let_mut": {
+        "prefix": "let_mut",
+        "body": [
+            "let mut ${1:varname} : ${2:type} = $0"
+        ],
+        "description": "mutable var declaration"
+    },
+    "if": {
+        "prefix": "if",
+        "body": [
+            "if $0 {",
+            "\t",
+            "}"
+        ],
+        "description": "if"
+    },
+    "if-else": {
+        "prefix": "ife",
+        "body": [
+            "if $0 {",
+            "\t",
+            "} else {",
+            "\t",
+            "}"
+        ],
+        "description": "if-else"
+    },
+    "if-let": {
+        "prefix": "if?!",
+        "body": [
+            "if let ${1|Some(item),Err(e)|} = $0 {",
+            "\t",
+            "}"
+        ],
+        "description": "if-let"
+    },
+    "match": {
+        "prefix": "match",
+        "body": [
+            "match $0 {",
+            "\t => ",
+            "\t_ => ",
+            "}"
+        ],
+        "description": "match expr"
+    },
+    "match_opt": {
+        "prefix": "match?",
+        "body": [
+            "match $0 {",
+            "\tSome(v) => ",
+            "\tNone => ",
+            "}"
+        ],
+        "description": "match optional"
+    },
+    "match_err": {
+        "prefix": "match!",
+        "body": [
+            "match $0 {",
+            "\tOk(v) => ",
+            "\tErr(e) => ",
+            "}"
+        ],
+        "description": "match result"
+    },
+    "loop": {
+        "prefix": "loop",
+        "body": [
+            "loop {",
+            "\t$0",
+            "}"
+        ],
+        "description": "infinite loop"
+    },
+    "for": {
+        "prefix": "for",
+        "body": [
+            "for ${1:index}, ${2:value} in $0 {",
+            "\t",
+            "}"
+        ],
+        "description": "for loop"
+    },
+    "for_enum": {
+        "prefix": "fore",
+        "body": [
+            "for (i, &item) in $0.${3|iter(),into_iter(),iter_mut()|}.enumerate() {",
+            "\t",
+            "}"
+        ],
+        "description": "for enum loop"
+    },
+    "while": {
+        "prefix": "wh",
+        "body": [
+            "while $0 {",
+            "\t",
+            "}"
+        ],
+        "description": "while loop"
+    },
+    "while?": {
+        "prefix": "wh?",
+        "body": [
+            "while let Some(${1:value}) = $0 {",
+            "\t",
+            "}"
+        ],
+        "description": "while let loop"
+    },
+    "struct": {
+        "prefix": "stru",
+        "body": [
+            "struct ${1:name} {",
+            "\t$0",
+            "}"
+        ],
+        "description": "struct decl"
+    },
+    "trait": {
+        "prefix": "trait",
+        "body": [
+            "trait ${1:name} {",
+            "\t$0",
+            "}"
+        ],
+        "description": "trait decl"
+    },
+    "impl_deref": {
+        "prefix": "im_deref",
+        "body": [
+            "impl<T> Deref for ${1:type}<T> {",
+            "\ttype Target = T\n",
+            "\tfn deref(&self) -> &T {",
+            "\t\t$0",
+            "\t}",
+            "}"
+        ],
+        "description": "impl Deref trait for type"
+    },
+    "impl_display": {
+        "prefix": "im_display",
+        "body": [
+            "impl Display for ${1:type} {",
+            "\tfn fmt(&self, f: &mut Formatter) -> fmt::Result {",
+            "\t\twrite!(f, \"{}\", self.$0)",
+            "\t}",
+            "}"
+        ],
+        "description": "impl Display trait for type"
+    },
+    "impl_drop": {
+        "prefix": "im_drop",
+        "body": [
+            "impl<> Drop for ${1:type}<T> {",
+            "\tfn drop(&mut self) {",
+            "\t\tunsafe {",
+            "\t\t\tlibc::free(self.0.as_ptr().cast());$0",
+            "\t\t}",
+            "\t}",
+            "}"
+        ],
+        "description": "impl Drop trait for type"
+    },
+    "impl_hash": {
+        "prefix": "im_hash",
+        "body": [
+            "impl Hash for ${1:type} {",
+            "\tfn hash<H: Hasher>(&self, state: &mut H) {",
+            "\t\tself.$0.hash(state)",
+            "\t}",
+            "}"
+        ],
+        "description": "impl Hash trait for type"
+    },
+    "impl_from": {
+        "prefix": "im_from",
+        "body": [
+            "impl From<${1:from_type}> for ${2:to_type} {",
+            "\tfn from(item: ${1:from_type}) -> Self {",
+            "\t\t${2:to_type} { $0 }",
+            "\t}",
+            "}"
+        ],
+        "description": "impl From/Into trait for type"
+    },
+    "impl_tryfrom": {
+        "prefix": "im_tryfrom",
+        "body": [
+            "impl TryFrom<${1:from_type}> for ${2:to_type} {",
+            "\ttype Error = ()\n",
+            "\tfn try_from(value: ${1:from_type}) -> Result<Self, Self::Error> {",
+            "\t\tOk(${2:to_type} { $0 })",
+            "\t}",
+            "}"
+        ],
+        "description": "impl TryFrom/TryInto trait for type"
+    },
+    "constructor/method": {
+        "prefix": "impl",
+        "body": [
+            "impl ${1:type} {",
+            "\tfn new() -> ${1:type} {",
+            "\t\t${1:type}{ $0 }",
+            "\t}",
+            "}"
+        ],
+        "description": "impl constructor/method"
+    },
+    "fn": {
+        "prefix": "fn",
+        "body": [
+            "fn ${1:name}($0) -> i32 {",
+            "\t1",
+            "}"
+        ],
+        "description": "fn decl"
+    },
+    "async_fn": {
+        "prefix": "fn_async",
+        "body": [
+            "async fn ${1:name}($0) -> Result<()> {",
+            "\tOk(1)",
+            "}"
+        ],
+        "description": "async fn decl"
+    },
+    "method": {
+        "prefix": "fn_met",
+        "body": [
+            "fn ${1:name}(${2|&self,&mut self,self|}, $0) -> i32 {",
+            "\t1",
+            "}"
+        ],
+        "description": "method decl"
+    },
+    "mod": {
+        "prefix": "mod",
+        "body": [
+            "${1|mod,pub mod|} {",
+            "\t$0",
+            "}"
+        ],
+        "description": "module decl"
+    },
+    "test_mod": {
+        "prefix": "mod_test",
+        "body": [
+            "#[cfg(test)]",
+            "mod {",
+            "\t$0",
+            "}"
+        ],
+        "description": "module test decl"
+    },
+    "test_fn": {
+        "prefix": "fn_test",
+        "body": [
+            "#[test]",
+            "fn ${1:name}($0) -> i32 {",
+            "\t1",
+            "}"
+        ],
+        "description": "test fn decl"
+    }
+}
