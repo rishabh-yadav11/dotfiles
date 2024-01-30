@@ -26,7 +26,8 @@ alias .4='../../../..'
 alias .5='../../../../..'
 #tldr to help
 alias help='tldr'
-
+#factrio
+alias factrio="~/.games/factorio/bin/x64/factorio"
 #less =more
 alias less='more'
 #git 
