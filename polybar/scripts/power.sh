@@ -75,7 +75,7 @@ else
         icon="󰂃"
     else
       icon="󰂃"
-        	dunstify -a "Low battery " -u critical -r 9994 -h int:value:"$battery_percent" -i "battery" "Battery" "Currently at $battery_percent%" -t 5000
+        	# dunstify -a "Low battery " -u critical -r 9994 -h int:value:"$battery_percent" -i "battery" "Battery" "Currently at $battery_percent%" -t 5000
 
     fi
 
