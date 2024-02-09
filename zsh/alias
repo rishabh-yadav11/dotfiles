@@ -7,7 +7,8 @@ alias l.='exa -alF --icons=auto  --color=always --group-directories-first| grep 
 alias tree='exa -aT --icons=auto --color=always'
 #kitty ssh
 alias ssh='kitten ssh'
-
+#kitten icat
+alias icat='kitten icat'
 #cat to bat
 alias cat='bat'
 
@@ -29,7 +30,7 @@ alias help='tldr'
 #factrio
 alias factrio="~/.games/factorio/bin/x64/factorio"
 #less =more
-alias less='more'
+# alias less='more'
 #git 
 alias gc='git commit' 
 alias gp='git push'
