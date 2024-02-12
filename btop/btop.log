@@ -4,3 +4,28 @@
 2024/02/08 (19:47:16) | INFO: Logger set to DEBUG
 2024/02/08 (19:47:20) | INFO: Logger set to INFO
 2024/02/08 (19:47:27) | INFO: Quitting! Runtime: 00:01:22
+
+2024/02/11 (18:18:57) | ===> btop++ v.1.3.0
+2024/02/11 (18:18:57) | INFO: Logger set to INFO
+2024/02/11 (18:18:57) | INFO: Running on /dev/pts/1
+2024/02/11 (18:19:00) | INFO: Quitting! Runtime: 00:00:03
+
+2024/02/12 (15:57:00) | ===> btop++ v.1.3.0
+2024/02/12 (15:57:00) | INFO: Logger set to INFO
+2024/02/12 (15:57:00) | INFO: Running on /dev/pts/1
+2024/02/12 (15:57:45) | INFO: Quitting! Runtime: 00:00:45
+
+2024/02/12 (16:00:43) | ===> btop++ v.1.3.0
+2024/02/12 (16:00:43) | INFO: Logger set to INFO
+2024/02/12 (16:00:43) | INFO: Running on /dev/pts/2
+2024/02/12 (16:00:52) | INFO: Quitting! Runtime: 00:00:09
+
+2024/02/12 (16:19:34) | ===> btop++ v.1.3.0
+2024/02/12 (16:19:34) | INFO: Logger set to INFO
+2024/02/12 (16:19:34) | INFO: Running on /dev/pts/0
+2024/02/12 (16:19:50) | INFO: Quitting! Runtime: 00:00:16
+
+2024/02/12 (16:19:53) | ===> btop++ v.1.3.0
+2024/02/12 (16:19:53) | INFO: Logger set to INFO
+2024/02/12 (16:19:53) | INFO: Running on /dev/pts/0
+2024/02/12 (16:20:05) | INFO: Quitting! Runtime: 00:00:12
