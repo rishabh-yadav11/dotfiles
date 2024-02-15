@@ -1,29 +1,21 @@
 #!/bin/sh
 PATH_AC="/sys/class/power_supply/AC0"
 PATH_BATTERY_0="/sys/class/power_supply/BAT0"
-
 ac=0
 battery_level_0=0
 battery_max_0=0
-
 if [ -f "$PATH_AC/online" ]; then
     ac=$(cat "$PATH_AC/online")
- 
 fi
 
 if [ -f "$PATH_BATTERY_0/charge_now" ]; then
     battery_level_0=$(cat "$PATH_BATTERY_0/charge_now")
-    
 fi
-
 if [ -f "$PATH_BATTERY_0/charge_full" ]; then
     battery_max_0=$(cat "$PATH_BATTERY_0/charge_full")
-    
 fi
-
 battery_percent=$(($battery_level_0 * 10000))
 battery_percent=$(($battery_percent / $battery_max_0 / 100 ))
-
 
 if [ "$ac" -eq 1 ]; then
 	
@@ -75,9 +67,7 @@ else
         icon="󰂃"
     else
       icon="󰂃"
-        	# dunstify -a "Low battery " -u critical -r 9994 -h int:value:"$battery_percent" -i "battery" "Battery" "Currently at $battery_percent%" -t 5000
-
+        	 dunstify -a "Low battery " -u critical -r 9994 -h int:value:"$battery_percent" -i "battery" "Battery" "Currently at $battery_percent%" -t 5000
     fi
-
    echo "$icon $battery_percent%"
 fi
