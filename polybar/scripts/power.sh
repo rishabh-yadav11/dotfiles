@@ -19,8 +19,10 @@ battery_percent=$(($battery_percent / $battery_max_0 / 100 ))
 
 if [ "$ac" -eq 1 ]; then
 	
-    if [ "$battery_percent" -gt 100 ]; then
+    if [ "$battery_percent" -gt  99 ]; then
         icon="󰂅"
+
+        	 dunstify -a "battery full " -r 9994 -h int:value:"$battery_percent" -i "battery" "Battery" "Currently at $battery_percent%" -t 5000
     elif [ "$battery_percent" -gt 90 ]; then
         icon="󰂋"
     elif [ "$battery_percent" -gt 80 ]; then
