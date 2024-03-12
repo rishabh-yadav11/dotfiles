@@ -1,3 +1,4 @@
+alias rec='script -aq ~/.termlog/term-$(date --iso-8601=seconds ).log'
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
