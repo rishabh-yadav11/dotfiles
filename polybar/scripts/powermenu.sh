@@ -25,7 +25,7 @@ case $chosen in
 			systemctl reboot	
         ;;
     $lock)
-			i3lock-fancy
+			i3lock-fancy-rapid 5 5
         ;;
     $suspend)
 			systemctl suspend	

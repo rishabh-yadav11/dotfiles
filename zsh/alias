@@ -1,3 +1,4 @@
+alias rec='script -aq ~/.termlog/term-$(date --iso-8601=seconds ).log'
 # Changing "ils" to "exa"
 alias ls='exa  --color=always --group-directories-first'
 alias ll='exa -alF --icons=auto --color=always --group-directories-first'
